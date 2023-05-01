@@ -1,0 +1,297 @@
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    background-image: url(img/tatry.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter:contrast(110%) grayscale(25%);
+    background-position: center;
+    overflow-x: hidden;
+}
+/*Nawigacja*/
+nav {
+    display: flex;
+    justify-content: right;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    color: white;
+}
+nav button {
+    display: none;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: transparent;
+}
+.nav {
+    width: inherit;
+    height: 100px;
+    display: flex;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    display: flex; /*Usuwa Whitespace w Mozilla*/
+}
+.nav li {
+    display: inline-block;
+    height: inherit;
+    width: 25%;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: none;
+    transition: all 1s ease-in-out;
+}
+.nav span {
+    transition: all 1s ease-in-out;
+    transform: translateY(0);
+}
+.nav a:hover span {
+    transform: translateY(-10px);
+}
+.nav a:hover {
+    backdrop-filter: blur(5px);
+}
+.button {
+    position: relative;
+}
+/*guzik*/
+.icon {
+    width: 25px;
+    height: 3px;
+    background-color: lightgray;
+    position: absolute;
+    left: 12.5px;
+    display: flex;
+    justify-content: center;
+    transition: all .5s linear;
+}
+.icon::before {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: lightgray;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    transition: all .5s linear;
+}
+.icon::after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: lightgray;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    transition: all .5s linear;
+}
+nav button:focus .icon::before, nav button:focus .icon::after {
+    width: 25px;
+}
+nav button:focus .icon {
+    width: 20px;
+}
+/*Header*/
+header {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+header p{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+/*Main*/
+main {
+    color: black;
+    background-color: white;
+    display: grid;
+    width: 100%;
+    box-shadow: 5px 0 5px white;
+    grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
+    filter: brightness(.9);
+    height: 700px;
+}
+section {
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 6fr;
+    padding: 25px;
+}
+section h1 {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.linia {
+    justify-self: center;
+    align-self: center;
+    height: 500px;
+    background-color: gray;
+    width: 2px;
+}
+/*footer*/
+footer {
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    height: 250px;
+    color: white;
+    display: grid;
+    padding: 25px 0;
+    box-sizing: border-box;
+    grid-template-columns: 4fr 1fr;
+}
+.footer {
+    border-right: 2px gray outset;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.fhead {
+    color: lightgray;
+    font-size: 50px;
+}
+.mininav {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: lightgray;
+}
+.mininav p {
+    padding-bottom: 25px;
+    font-size: 25px;
+}
+.mininav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mininav li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.mininav a {
+    font-weight: bold;
+    color:white;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+    transition: all 1s ease;
+    width: min-content;
+}
+.mininav a:hover {
+    text-shadow: 0px 0px 5px lightgray;
+}
+/*Kontakt*/
+.kontakt {
+    margin: 25px;
+    width: auto;
+    height: 700px;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr auto 6fr;
+}
+.hkontakt {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+.dane {
+    color: rgb(32, 32, 32);
+    padding: 25px;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    grid-template-rows: auto;
+}
+/*O boże święty media*/
+@media screen and (max-width: 650px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .linia {
+        height: 2px;
+        width: inherit;
+    }
+    section {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    /*nav media*/
+    nav button {
+        display: block;
+    }
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        left: -100%;
+        transition: all 1s ease;
+    }
+    button:focus~.nav,.nav:hover {
+        left: 0;
+    }
+    .nav li {
+        display: block;
+        width: 100%;
+    }
+    .nav ul {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    /*Header media*/
+    header p {
+        width: min-content;
+    }
+    /*footer media*/
+    footer {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: auto;
+        padding: 0 5%;
+    }
+    .footer {
+        border-right: none;
+    }
+    .mininav {
+        display: none;
+    }
+}
