@@ -1,5 +1,5 @@
 * {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -129,11 +129,11 @@ main {
     color: black;
     background-color: white;
     display: grid;
-    width: 100%;
-    box-shadow: 5px 0 5px white;
     grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
-    filter: brightness(.9);
     height: 700px;
+    width: auto;
+    margin: 25px;
+    border-radius: 20px;
 }
 section {
     display: grid;
@@ -252,7 +252,7 @@ footer {
     width: auto;
     margin: 25px;
     background-color: white;
-    height: 700px;
+    height: 1200px;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 3fr 2fr;
