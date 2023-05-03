@@ -260,10 +260,12 @@ footer {
 }
 .opisp {
     border-right: 2px gray solid;
+    margin: 10px;
 }
 .kalendarz {
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .artykuly {
     grid-column: span 2;
