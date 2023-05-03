@@ -129,7 +129,7 @@ main {
     color: black;
     background-color: white;
     display: grid;
-    grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
+    grid-template-columns: 6fr auto 6fr auto 6fr;
     height: 700px;
     width: auto;
     margin: 25px;
@@ -252,22 +252,48 @@ footer {
     width: auto;
     margin: 25px;
     background-color: white;
-    height: 1200px;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto;
     padding: 25px;
 }
 .opisp {
-    grid-row: span 2;
     border-right: 2px gray solid;
+}
+.kalendarz {
+    display: flex;
+    flex-direction: column;
+}
+.artykuly {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+.wyprawa {
+    border: 1px gray solid;
+    width: auto;
+    margin: 10px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: space-between;
+}
+.wyprawa img {
+    display: block;
+    height: 90%;
+}
+.wyprawa p {
+    margin: 1%;
 }
 /*O boże święty media*/
 @media screen and (max-width: 650px) {
     main {
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto;
     }
     .linia {
         height: 2px;
@@ -322,5 +348,16 @@ footer {
     .kontakt {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
+    }
+    /*Podróże media*/
+    .podroze {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .podroze>* {
+        border: none;
+    }
+    .artykuly {
+        grid-column: 1;
     }
 }
