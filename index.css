@@ -147,6 +147,9 @@ section h1 {
     font-size: 20px;
     text-transform: uppercase;
 }
+section p {
+    font-size: 24px;
+}
 .linia {
     justify-self: center;
     align-self: center;
@@ -291,6 +294,97 @@ footer {
 .wyprawa p {
     margin: 1%;
 }
+/*Galeria*/
+.galeria {
+    display: grid;
+    width: auto;
+    margin: 25px;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.video {
+    background-color: white;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+.video iframe {
+    border-radius: 20px;
+}
+.img {
+    background-color: white;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+.img button {
+    margin: 10px;
+}
+.autoimg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Preloader*/
+.preloader {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border-top: 20px steelblue solid;
+    border-bottom: 20px steelblue solid;
+    border-right: 20px transparent solid;
+    border-left: 20px transparent solid;
+    border-radius: 50%;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    animation: preloader 1s linear infinite;
+}
+.preloader::before {
+    content: '';
+    background-color: transparent;
+    border-top: 20px rgb(75, 149, 209) solid;
+    border-bottom: 20px rgb(75, 149, 209) solid;
+    border-right: 20px transparent solid;
+    border-left: 20px transparent solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: preloaderbefore 1s linear infinite;
+}
+@keyframes preloader {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(180deg);
+    }
+}
+@keyframes preloaderbefore {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(180deg);
+    }
+}
+/*koniec preloadera*/
+.nzdj {
+    grid-column: span 2;
+    background-color: white;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
 /*O boże święty media*/
 @media screen and (max-width: 650px) {
     main {
@@ -300,10 +394,6 @@ footer {
     .linia {
         height: 2px;
         width: 75%;
-    }
-    section {
-        overflow-x: hidden;
-        overflow-y: scroll;
     }
     /*nav media*/
     nav button {
