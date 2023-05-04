@@ -485,7 +485,7 @@ footer {
         flex-direction: column;
     }
     .zdj img {
-        width: 100%;
+        width: 50%;
     }
     .preloader {
         width: 100px;
