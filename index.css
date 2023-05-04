@@ -470,4 +470,16 @@ footer {
     .artykuly {
         grid-column: 1;
     }
+    /*galeria media*/
+    .galeria {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .nzdj {
+        grid-column: 1;
+    }
+    .zdj {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
