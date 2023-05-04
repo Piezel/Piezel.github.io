@@ -130,7 +130,6 @@ main {
     background-color: white;
     display: grid;
     grid-template-columns: 6fr auto 6fr auto 6fr;
-    height: 700px;
     width: auto;
     margin: 25px;
     border-radius: 20px;
@@ -470,6 +469,9 @@ footer {
     .artykuly {
         grid-column: 1;
     }
+    .podroze img {
+        width: 100%;
+    }
     /*galeria media*/
     .galeria {
         grid-template-columns: auto;
@@ -481,5 +483,16 @@ footer {
     .zdj {
         flex-wrap: nowrap;
         flex-direction: column;
+    }
+    .zdj img {
+        width: 100%;
+    }
+    .preloader {
+        width: 100px;
+        height: 100px;
+    }
+    .preloader::before {
+        width: 25px;
+        height: 25px;
     }
 }
