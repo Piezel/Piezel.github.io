@@ -69,10 +69,12 @@ nav button {
 .nav a:hover {
     backdrop-filter: blur(5px);
 }
+/*guzik*/
 .button {
     position: relative;
+    width: 50px;
+    height: 50px;
 }
-/*guzik*/
 .icon {
     width: 25px;
     height: 3px;
@@ -80,6 +82,7 @@ nav button {
     position: absolute;
     left: 12.5px;
     display: flex;
+    top: 25px;
     justify-content: center;
     transition: all .5s linear;
 }
