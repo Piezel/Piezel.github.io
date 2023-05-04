@@ -470,7 +470,7 @@ footer {
         grid-column: 1;
     }
     .podroze img {
-        width: 100%;
+        width: 50%;
     }
     /*galeria media*/
     .galeria {
@@ -485,7 +485,7 @@ footer {
         flex-direction: column;
     }
     .zdj img {
-        width: 50%;
+        width: 100%;
     }
     .preloader {
         width: 100px;
