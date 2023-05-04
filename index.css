@@ -261,6 +261,9 @@ footer {
     grid-template-rows: auto;
     padding: 25px;
 }
+.opisp p {
+    font-size: 24px;
+}
 .opisp {
     border-right: 2px gray solid;
     margin: 10px;
@@ -290,6 +293,7 @@ footer {
 .wyprawa img {
     display: block;
     height: 90%;
+    width: 200px;
 }
 .wyprawa p {
     margin: 1%;
@@ -379,11 +383,25 @@ footer {
 .nzdj {
     grid-column: span 2;
     background-color: white;
-    height: 600px;
     border-radius: 20px;
     display: flex;
     padding: 10px;
     flex-direction: column;
+}
+.zdj {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.zdj img {
+    display: block;
+    height: 300px;
+    width: 400px;
+    margin: 5px;
+    border-radius: 10px;
 }
 /*O boże święty media*/
 @media screen and (max-width: 650px) {
